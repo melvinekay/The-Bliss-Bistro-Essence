@@ -1,0 +1,47 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+<h1 class="text-center">Order Your Food</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <table class="table table-striped table-hover table-dark container table-border border:1px solid black border-collapse: separate">
+            <thead>
+                <tr>
+                    <th>Food</th>
+                    <th>Price (Ksh)</th>
+                    <th>Quantity</th>
+                    <th>Total (Ksh)</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for food in food_items %}
+            <tr>
+                    <td>{{ food.name }}</td>
+                    <td>Ksh. {{ food.price|floatformat:2 }}</td>  <!-- Display price in Ksh -->
+                    <td>
+                        <input
+                            type="number"
+                            name="quantity_{{ food.id }}"
+                            value="0"
+                            min="0"
+                            onchange="calculateTotal({{ food.id }}, {{ food.price }})">
+                    </td>
+                    <td id="total_{{ food.id }}">Ksh 0.00</td>  <!-- Display total in Ksh -->
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-center align-items-center vh-50">
+            <button type="submit" class="btn btn-warning">Submit Order</button>
+        </div>
+    </form>
+
+    <script>
+        function calculateTotal(id, price) {
+            const quantity = document.querySelector(`input[name="quantity_${id}"]`).value;
+            const total = price * quantity;
+            document.getElementById(`total_${id}`).innerText = `Ksh ${total.toFixed(2)}`;
+        }
+    </script>
+{% endblock %}

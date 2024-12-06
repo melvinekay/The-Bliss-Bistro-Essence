@@ -1,0 +1,105 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+    <!-- Specials Section -->
+    <section id="specials" class="specials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Specials</h2>
+        <p>Check Out Our All Time Specials 😁🤤</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#specials-tab-1">Major Specialty</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-2">Specialty One</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-3">Specialty Two</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-4">Specialty Three</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-5">Specialty Four</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="specials-tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h2>Seafood Combo: Surf and Turf Global</h2>
+{#                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>#}
+                    <p>Surf and Turf is one of the most iconic and luxurious seafood combinations, blending the best of land and sea on a single plate. This dish typically pairs a succulent cut of steak, such as filet mignon or ribeye, with premium seafood like lobster tail, jumbo prawns, or scallops. The rich, umami flavors of the steak complement the delicate sweetness of the seafood, creating a harmonious balance that satisfies diverse palates.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/menu1/surfnturf.jpg' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="specials-tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Special Japanese Sushi</h3>
+{#                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>#}
+                    <p>Sushi is one of Japan’s most iconic culinary creations, renowned globally for its artistry and delicate flavors. It combines vinegared rice with fresh, raw fish, seafood, or vegetables, often wrapped in seaweed. Popular varieties include Nigiri (sliced fish atop rice), Maki (rolls wrapped in seaweed), and Sashimi (thinly sliced raw fish). Sushi represents the perfect balance of taste, texture, and presentation, making it a symbol of Japanese culture and culinary mastery.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/menu1/japanesesushi1.jpg' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="specials-tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Special Italian Pizza Margherita</h3>
+{#                    <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>#}
+                    <p>Hailing from Naples, the Pizza Margherita is a timeless classic that embodies simplicity and perfection. Made with a thin, crispy crust topped with fresh tomato sauce, mozzarella cheese, and basil leaves, its colors mirror the Italian flag. The harmony of flavors and textures makes it a global favorite, beloved for both casual meals and gourmet dining experiences.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/menu1/pizza.jpg' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="specials-tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Special Mexican Tacos</h3>
+{#                    <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>#}
+                    <p>Tacos are Mexico’s gift to the world of street food. This versatile dish features a soft or crispy tortilla filled with a variety of ingredients, such as seasoned meat, beans, cheese, and fresh toppings like lettuce, salsa, and guacamole. Whether you enjoy traditional tacos al pastor or modern fusion creations, tacos are a delightful combination of bold spices and satisfying textures.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/menu1/tacos.jpg' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="specials-tab-5">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Special Thailand Pad Thai</h3>
+{#                    <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>#}
+                    <p>Pad Thai is a quintessential Thai dish that has captured hearts across the globe. This stir-fried noodle dish blends rice noodles with shrimp, chicken, or tofu, cooked in a tangy tamarind-based sauce. It’s garnished with crushed peanuts, lime, and fresh herbs, creating a perfect harmony of sweet, sour, salty, and spicy flavors. Pad Thai is a culinary ambassador of Thailand’s vibrant street food culture.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/menu1/padthai1.jpg' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Specials Section -->
+{% endblock %}

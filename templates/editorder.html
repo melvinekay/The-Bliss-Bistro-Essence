@@ -1,0 +1,39 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+<h1>Edit Your Orders</h1>
+<form method="POST" action="{% url 'edit_all_orders' %}">
+    {% csrf_token %}
+    <table>
+        <thead>
+            <tr>
+                <th>Food</th>
+                <th>Quantity</th>
+                <th>Total Price (Ksh)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for food_id, details in session_orders.items %}
+            <tr>
+                <td>{{ details.name }}</td>
+                <td>
+                    <input type="number" name="quantity_{{ food_id }}" value="{{ details.quantity }}" min="0">
+                </td>
+                <td>Ksh {{ details.total_price|floatformat:2 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button type="submit" class="btn btn-primary">Update Orders</button>
+</form>
+
+
+    <script>
+        function calculateTotal(id, price) {
+            const quantity = document.querySelector(`input[name="quantity_${id}"]`).value;
+            const total = price * quantity;
+            document.getElementById(`total_${id}`).innerText = `Ksh ${total.toFixed(2)}`;
+        }
+    </script>
+{% endblock %}

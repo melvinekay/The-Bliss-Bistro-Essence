@@ -1,0 +1,80 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid about-img" alt="">
+          </div>
+          <div class="col-lg-6 order-2 order-lg-1 content">
+            <h3>Welcome to Bliss Bistro Essence</h3>
+            <p class="fst-italic">
+                At Bliss Bistro Essence, we believe that every meal is an opportunity to create lasting memories. Nestled in the heart of culinary creativity, our bistro is more than just a place to dine—it’s a celebration of flavors, passion, and the art of bringing people together.
+            </p>
+              <h4>Our Core Value</h4>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>Uncompromising Quality</span><br></li>
+                <span>At Bliss Bistro Essence, quality is our foundation. From sourcing the freshest ingredients to crafting every dish with precision, we take pride in delivering an exceptional dining experience. Our commitment to excellence ensures that every bite embodies the perfect harmony of taste and texture.</span>
+              <li><i class="bi bi-check2-all"></i> <span>Warmth in Service</span><br></li>
+                <span>Hospitality is at the heart of what we do. We strive to create an inviting atmosphere where every guest feels like family. Our attentive and friendly team goes above and beyond to make your visit unforgettable, ensuring you leave with a smile and a full heart.</span>
+              <li><i class="bi bi-check2-all"></i> <span>Celebration of Diversity</span><br></li>
+                <span>Our menu is a reflection of the diverse culinary traditions that inspire us. By blending classic recipes with innovative twists, we create dishes that honor global flavors while embracing the unique essence of Bliss Bistro.</span>
+            </ul>
+            <h3>A place to savor and share</h3>
+              <p>Bliss Bistro Essence is more than just a restaurant—it’s a haven for food lovers, a canvas for creativity, and a space where connections flourish over shared meals. Whether you’re celebrating a special occasion or simply savoring the moment, we’re here to make it extraordinary.</p>
+            <h3>Thank you for choosing Bliss Bistro Essence—where taste meets soul.</h3>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>WHY US</h2>
+        <p>Why Choose Our Bliss Bistro Essence</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <span>01</span>
+              <h4><a href="" class="stretched-link">A Culinary Journey Like No Other!!!</a></h4>
+              <p>At Bliss Bistro Essence, every dish tells a story. Our chefs meticulously craft each recipe by blending the finest local ingredients with global inspirations, creating a menu that caters to every palate. From timeless classics to inventive creations, dining with us is an exploration of flavors that excite the senses and leave a lasting impression.</p>
+            </div>
+          </div><!-- Card Item -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <span>02</span>
+              <h4><a href="" class="stretched-link">Exceptional Ambiance and Warm Hospitality!!!</a></h4>
+              <p>Step into an environment that feels like home, yet offers the sophistication of fine dining. Our bistro is designed to provide comfort and elegance, perfect for intimate dinners, family gatherings, or celebratory occasions. Coupled with our attentive and friendly staff, every visit promises not just a meal, but an experience to cherish.</p>
+            </div>
+          </div><!-- Card Item -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <span>03</span>
+              <h4><a href="" class="stretched-link">Commitment to Sustainability and Community!!!</a></h4>
+              <p>We believe in making a positive impact on the world around us. By sourcing fresh, seasonal produce and partnering with local farmers, we ensure that our food is both sustainable and supports our community. Additionally, our eco-friendly practices reflect our dedication to preserving the environment for future generations.</p>
+            </div>
+          </div><!-- Card Item -->
+        <h4>Bliss Bistro Essence stands out not just as a restaurant, but as a symbol of quality, care, and connection. Join us to experience the difference!</h4>
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+{% endblock %}

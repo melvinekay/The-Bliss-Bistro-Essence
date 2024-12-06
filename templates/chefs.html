@@ -1,0 +1,80 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+    <!-- Chefs Section -->
+    <section id="chefs" class="chefs section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Team</h2>
+        <p>Cooking is an art, and the kitchen is where the magic happens!!!😊</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="{% static 'assets/img/chefs/chefs-1.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Mel Katua</h4>
+                  <span>Master Chef</span>
+                </div>
+                <div class="social">
+                  <a href="https://x.com/colorado_mell"><i class="bi bi-twitter-x"></i></a>
+                  <a href="https://facebook.com/mel.marsh.425"><i class="bi bi-facebook"></i></a>
+                  <a href="https://instagram.com/d.amn_.boy._its_mel._"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/melvin-kyalo-846837303"><i class="bi bi-linkedin"></i></a>
+                  <a href="https://wa.me/0115786741"><i class="bi bi-whatsapp"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="{% static 'assets/img/chefs/chefs-2.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Madison Kim</h4>
+                  <span>Patissier</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href=""><i class="bi bi-whatsapp"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <img src="{% static 'assets/img/chefs/chefs-3.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Huya Jay</h4>
+                  <span>Cook</span>
+                </div>
+                <div class="social">
+                  <a href="https://x.com/jabez_9"><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href="https://instagram.com/huya_jay"><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://wa.me/0791751475"><i class="bi bi-whatsapp"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Chefs Section -->
+{% endblock %}

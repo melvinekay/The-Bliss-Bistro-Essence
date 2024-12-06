@@ -1,0 +1,27 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+	    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="{% static 'assets/img/hero-bg.jpg' %}" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 d-flex flex-column align-items-center align-items-lg-start">
+            <h2 data-aos="fade-up" data-aos-delay="100">Welcome to: <br><span>🌿Bliss Bistro Essence🌿</span></h2>
+            <p data-aos="fade-up" data-aos-delay="200">Your Destination for Exquisite Flavors & Timeless Elegance!!!</p>
+            <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+              <a href="{% url 'menu' %}" class="cta-btn">Our Delightful Menu</a>
+              <a href="{% url 'booking' %}" class="cta-btn">Book a Table</a>
+            </div>
+          </div>
+          <div class="col-lg-4 d-flex align-items-center justify-content-center mt-5 mt-lg-0">
+            <a href="https://youtu.be/WW0SLuX8HsI?si=IrgDghQAG78mcKMh" class="glightbox pulsating-play-btn"></a>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+{% endblock %}

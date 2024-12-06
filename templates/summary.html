@@ -1,0 +1,39 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+<h1 style="text-align: center;">Your Order Summary</h1>
+<table class="table table-striped table-hover table-dark container table-border border:1px solid black border-collapse: separate">
+    <thead>
+        <tr>
+            <th>Food</th>
+            <th>Quantity</th>
+            <th>Total Price (Ksh)</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if combined_order %}
+        <tr>
+            <td>{{ combined_order.combined_food }}</td>
+            <td>{{ combined_order.total_quantity }}</td>
+            <td>Ksh {{ combined_order.total_price|floatformat:2 }}</td>
+            <td>
+                <a href="/editorder/all" class="btn btn-sm btn-warning">Edit All</a>
+                <a href="{% url 'delete_all_orders' %}" class="btn btn-sm btn-danger">Delete All</a>
+                <a href="{% url 'pay' %}" class="btn btn-sm btn-success">Pay</a>
+                <a href="{% url 'clear_session' %}" class="btn btn-sm btn-secondary">New Customer</a>
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="4" class="text-center">No orders yet. Go back to
+                <button style="background-color: #cda45e; border-radius: 10px; color: white">
+                    <a href="{% url 'order' %}">menu</a>
+                </button>.
+            </td>
+        </tr>
+        {% endif %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,198 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+    <!-- Menu Section -->
+    <section id="menu" class="menu section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Menu</h2>
+        <p>Check Out Our Tasty Menu 😉👌</p>
+      </div><!-- End Section Title -->
+
+      <div class="container isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul class="menu-filters isotope-filters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-starters">Starters</li>
+              <li data-filter=".filter-exotic">Exotic</li>
+              <li data-filter=".filter-specialty">Specialty</li>
+              <li data-filter=".filter-drinks">Drinks</li>
+            </ul>
+          </div>
+        </div><!-- Menu Filters -->
+
+        <div class="row isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-6 menu-item isotope-item filter-starters">
+            <img src="{% static 'assets/img/menu1/italianpizza.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Italian Pizza</a><span>Ksh. 1250</span>
+            </div>
+            <div class="menu-ingredients">
+                Description: A flatbread topped with tomato sauce, cheese, and various toppings such as vegetables, meats, or seafood.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="{% static 'assets/img/menu1/japanesesushi.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Japanese Sushi</a><span>Ksh. 1200</span>
+            </div>
+            <div class="menu-ingredients">
+                Description: A Japanese dish of vinegared rice paired with fresh fish, seafood, or vegetables, often served with soy sauce, wasabi, and pickled ginger.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-starters">
+            <img src="{% static 'assets/img/menu1/frenchwaffles.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">French Waffles</a><span>Ksh. 250</span>
+            </div>
+            <div class="menu-ingredients">
+                French waffles, often called gaufres in French, are light and crispy waffles that originate from France and neighboring regions.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-exotic">
+            <img src="{% static 'assets/img/menu1/padthai.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Thailand Pad Thai</a><span>Ksh. 1050</span>
+            </div>
+            <div class="menu-ingredients">
+                Description: A stir-fried noodle dish with tamarind sauce, eggs, tofu or shrimp, bean sprouts, peanuts, and lime.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-exotic">
+            <img src="{% static 'assets/img/menu1/mexicantacos.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Mexican Tacos</a><span>Ksh. 350</span>
+            </div>
+            <div class="menu-ingredients">
+                Description: A traditional Mexican dish consisting of small corn or wheat tortillas filled with meats, vegetables, and salsa.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="{% static 'assets/img/menu1/pastacarbonara.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Italian Pasta Carbonara</a><span>Ksh. 600</span>
+            </div>
+            <div class="menu-ingredients">
+                Description: A creamy pasta dish made with eggs, Pecorino Romano cheese, pancetta, and black pepper.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-exotic">
+            <img src="{% static 'assets/img/menu1/indianbiryani.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Indian Biryani</a><span>Ksh. 850</span>
+            </div>
+            <div class="menu-ingredients">
+                Description: A flavorful mixed rice dish cooked with spices, meat (chicken, lamb, or fish), and sometimes vegetables.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="{% static 'assets/img/menu1/pekingduck.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Chinese Peking Duck</a><span>Ksh. 4500</span>
+            </div>
+            <div class="menu-ingredients">
+                Description: A Chinese dish featuring roasted duck with crispy skin, served with thin pancakes, hoisin sauce, and scallions.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="{% static 'assets/img/menu1/falafel.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Middle East Falafel</a><span>Ksh. 980</span>
+            </div>
+            <div class="menu-ingredients">
+                Description: Deep-fried balls or patties made from ground chickpeas or fava beans, served in pita bread or as part of a mezze.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-starters">
+            <img src="{% static 'assets/img/menu1/frenchcroissant.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">French Croissant</a><span>Ksh. 200</span>
+            </div>
+            <div class="menu-ingredients">
+                Description: A buttery, flaky pastry made from layered dough, often enjoyed for breakfast or with coffee.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-drinks">
+            <img src="{% static 'assets/img/menu1/cabernetsauvignon.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">French Cabernet Sauvignon</a><span>Ksh. 6500</span>
+            </div>
+            <div class="menu-ingredients">
+                Description: A bold, full-bodied red wine known for its flavors of dark fruits like blackcurrant and blackberry, with hints of spice, oak, and tobacco. Originating in Bordeaux, it's now produced worldwide.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-drinks">
+            <img src="{% static 'assets/img/menu1/italianchardonnay.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Italian Chardonnay</a><span>Ksh. 5200</span>
+            </div>
+            <div class="menu-ingredients">
+                Description: A versatile white wine with flavors ranging from crisp apple and citrus to rich buttery and oaky notes, depending on where it's produced. Famous in Burgundy and California.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-drinks">
+            <img src="{% static 'assets/img/menu1/oldfashioned.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Old Fashioned Cocktail</a><span>Ksh. 900</span>
+            </div>
+            <div class="menu-ingredients">
+                Description: A classic whiskey-based cocktail made with sugar, bitters, and a large ice cube, garnished with an orange twist. It perfectly balances the bold flavors of bourbon or rye whiskey with the sweetness of sugar and the aromatic complexity of bitters.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-drinks">
+            <img src="{% static 'assets/img/menu1/coffee.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Brewed Bliss Coffee</a><span>Ksh. 100</span>
+            </div>
+            <div class="menu-ingredients">
+                Description: A brewed beverage made from roasted coffee beans, enjoyed in various forms like espresso, cappuccino, or latte. Coffee is a cultural staple worldwide.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-drinks">
+            <img src="{% static 'assets/img/menu1/tea.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Bliss Serenity Tea</a><span>Ksh. 80</span>
+            </div>
+            <div class="menu-ingredients">
+                Description: Made from the leaves of the Camellia sinensis plant, tea comes in many varieties, including green, black, white, and oolong, often consumed plain or with milk and sugar.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-drinks">
+            <img src="{% static 'assets/img/menu1/cocacola.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Deluxe Coca-Cola</a><span>Ksh. 100</span>
+            </div>
+            <div class="menu-ingredients">
+                Description: A globally popular carbonated soft drink with a sweet and slightly tangy flavor, often served chilled or with ice.
+            </div>
+          </div><!-- Menu Item -->
+
+        </div><!-- Menu Container -->
+        <div class="d-flex justify-content-center align-items-center vh-50">
+            <button class="btn btn-warning"><a href="{% url 'order' %}">Place Order</a></button>
+{#            <button class="order-here d-flex align-items-center justify-content-center"><a href="{% url 'order' %}" id="">Order Here</a></button>#}
+        </div>
+      </div>
+
+    </section><!-- /Menu Section -->
+{% endblock %}

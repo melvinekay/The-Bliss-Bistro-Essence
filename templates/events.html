@@ -1,0 +1,135 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+    <!-- Events Section -->
+    <section id="events" class="events section">
+
+      <img class="slider-bg" src="{% static 'assets/img/events-bg.jpg' %}" alt="" data-aos="fade-in">
+
+      <div class="container">
+
+        <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/background/birthday.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Birthday Parties</h3>
+                  <div class="price">
+                    <p><span>Starting from Ksh 20,000 (varies based on number of guests and customizations).</span></p>
+                  </div>
+                  <p class="fst-italic">
+                      Celebrate life's milestones in style with a personalized birthday party at Bliss Bistro Essence. From whimsical themes to elegant setups, we ensure your special day is unforgettable.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Custom Decor & Themes: Tailored decorations to match your preferences.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Delectable Menus: A curated selection of delicious dishes and desserts.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Entertainment Options: Live music, DJs, or fun games to keep the energy alive.</span></li>
+                  </ul>
+                  <p>
+                    "Make your birthday a blissful celebration that you'll cherish forever!"
+                  </p>
+                </div>
+              </div>
+            </div><!-- End Slider item -->
+
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/background/privateparty.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Private Parties</h3>
+                  <div class="price">
+                    <p><span>Starting from Ksh 75,000 for 10-20 guests.</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Host an exclusive gathering with your closest friends and family in an intimate and sophisticated setting. Bliss Bistro Essence guarantees privacy and impeccable service.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Elegant Ambiance: Private sections designed for cozy and stylish gatherings.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Tailored Service: Dedicated staff to cater to your every need.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Custom Menus: Choose from our extensive menu to suit your guests' tastes.</span></li>
+                  </ul>
+                  <p>
+                    "Because some moments deserve to be shared in private bliss."
+                  </p>
+                </div>
+              </div>
+            </div><!-- End Slider item -->
+
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/background/custom party.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Outdoor Parties</h3>
+                  <div class="price">
+                    <p><span>Starting from Ksh 50,000 (location and menu-dependent).</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Take the celebration outdoors with our scenic setups, blending nature and luxury for an unforgettable experience. Perfect for those who love fresh air and stunning views.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Breathtaking Locations: Picturesque setups in gardens or terraces.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Interactive Food Stations: Grills, live cooking, and refreshing beverages.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Flexible Arrangements: Seating and decor tailored to your outdoor vision.</span></li>
+                  </ul>
+                  <p>
+                    "Elevate your party with nature's beauty and culinary delight!"
+                  </p>
+                </div>
+              </div>
+            </div><!-- End Slider item -->
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/background/wedding.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Wedding Parties</h3>
+                  <div class="price">
+                    <p><span>Starting from Ksh 100,000 (depending on guest count and inclusions).</span></p>
+                  </div>
+                  <p class="fst-italic">
+                      Celebrate your big day in grandeur with Bliss Bistro Essence's exquisite wedding services. From intimate ceremonies to lavish receptions, we bring your dream wedding to life.                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Luxurious Decor: Stunning floral arrangements and elegant seating setups.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Signature Cuisine: Premium multi-course meals crafted by our top chefs.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Comprehensive Packages: Photography, entertainment, and more included.</span></li>
+                  </ul>
+                  <p>
+                    "Your happily-ever-after begins with a celebration at Bliss Bistro Essence."
+                  </p>
+                </div>
+              </div>
+            </div><!-- End Slider item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Events Section -->
+{% endblock %}

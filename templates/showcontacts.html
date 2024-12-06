@@ -1,0 +1,23 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+	<h4 class="text-center">Contact Information</h4>
+    <table class="table table-striped table-hover table-dark container table-border border:1px solid black border-collapse: separate">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Subject</th>
+        <th>Message</th>
+    </tr>
+    {% for z in contacts %}
+    	<tr>
+        <td>{{z.name}}</td>
+        <td>{{z.email}}</td>
+        <td>{{z.subject}}</td>
+        <td>{{z.message}}</td>
+        </tr>
+    {% endfor %}
+
+    </table>
+{% endblock %}

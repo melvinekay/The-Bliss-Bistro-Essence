@@ -1,0 +1,121 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>What they're saying about us</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper" data-speed="600" data-delay="5000" data-breakpoints="{ &quot;320&quot;: { &quot;slidesPerView&quot;: 1, &quot;spaceBetween&quot;: 40 }, &quot;1200&quot;: { &quot;slidesPerView&quot;: 3, &quot;spaceBetween&quot;: 40 } }">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" "="">
+            <p>
+              <i class=" bi bi-quote quote-icon-left"></i>
+{#                <h3>A Culinary Masterpiece!</h3>#}
+                <span>Bliss Bistro Essence is a true gem in the culinary world. From the moment I walked in, I was captivated by the elegant yet welcoming ambiance. The menu offers a perfect blend of classic dishes and modern creations, all prepared with the freshest ingredients. Every bite was a delight, with flavors that were thoughtfully balanced and beautifully presented. It's not just dining here—it's an experience that nourishes the soul. I can’t wait to return and explore more of their incredible offerings!</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="{% static 'assets/img/testimonials/melkatua.jpg' %}" class="testimonial-img" alt="">
+                <h3>Mel Katua</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+{#                  <h3>Service Beyond Expectations!</h3>#}
+                  <span>I've dined at many restaurants, but the service at Bliss Bistro Essence is unmatched. The staff is incredibly attentive, ensuring every detail is perfect without being intrusive. From the warm welcome to the personal recommendations from the chef, every interaction felt genuine and thoughtful. It’s clear that the team takes pride in creating memorable experiences for their guests. Whether you're celebrating a special occasion or simply enjoying a night out, you'll feel like royalty here.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="{% static 'assets/img/testimonials/marianomaura.jpg' %}" class="testimonial-img" alt="">
+                <h3>Mariano Maura</h3>
+                <h4>Designer</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+{#                  <h3>A Flavorful Journey!</h3>#}
+                  <span>Bliss Bistro Essence has redefined what dining means for me. The diverse menu takes you on a flavorful journey around the world, showcasing dishes that are not only delicious but also innovative. I tried their signature seafood platter, and it was a masterpiece—fresh, perfectly cooked, and seasoned to perfection. The passion for food shines through in every dish. It’s a place where culinary artistry meets comfort, and I’m already planning my next visit!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="{% static 'assets/img/testimonials/madayakendall.jpg' %}" class="testimonial-img" alt="">
+                <h3>Madaya Kendall</h3>
+                <h4>Store Owner</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+{#                  <h3>A Haven for Food Lovers!</h3>#}
+                  <span>If you’re a food lover, Bliss Bistro Essence is your haven. The attention to detail in everything from the decor to the presentation of the dishes is incredible. The chefs are true artists, and you can taste the love and effort they put into each plate. I especially loved their desserts, which were the perfect ending to a flawless meal. Bliss Bistro Essence is more than just a restaurant—it’s a place where food brings people together in the best way possible.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="{% static 'assets/img/testimonials/kelvinmaina.jpg' %}" class="testimonial-img" alt="">
+                <h3>Kelvin Maina</h3>
+                <h4>Freelancer</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+{#                  <h3>Perfect for Any Occasion!</h3>#}
+                  <span>Bliss Bistro Essence is my go-to for every occasion, whether it’s a casual dinner or a grand celebration. The versatility of the space and the thoughtfulness of the staff make it ideal for any event. Recently, I hosted a birthday dinner here, and the team went above and beyond to make it special. The food was exquisite, the drinks were perfectly crafted, and the atmosphere was buzzing with joy. Bliss Bistro Essence has mastered the art of making guests feel special, and I couldn’t recommend it more!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="{% static 'assets/img/testimonials/huyajay.jpg' %}" class="testimonial-img" alt="">
+                <h3>Huya Jay</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+{% endblock %}
