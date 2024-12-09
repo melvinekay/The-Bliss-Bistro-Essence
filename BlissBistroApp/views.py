@@ -34,24 +34,7 @@ def gallery(request):
 
 
 def chefs(request):
-    if request.method == "POST":
-        username = request.POST.get("username")
-        password = request.POST.get("password")
-
-        # Authenticate the user
-        user = authenticate(request, username=username, password=password)
-
-        if user is not None:
-            # Log the user in
-            login(request, user)
-            return render(request, 'chefs.html')
-        else:
-            # Display an error message for invalid credentials
-            messages.error(request, "Invalid Login Credentials. Please Try Again.")
-            return render(request, 'login.html')  # Show the login page again
-
-    # Render login page if the request method is GET
-    return render(request, 'login.html')
+    return render(request, 'chefs.html')
 def booking(request):
     if request.method == "POST":
         BookaTable=Booking(
@@ -116,6 +99,42 @@ def register(request):
     else:
         return render(request, 'register.html')
 def login(request):
+    if request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+
+        # Authenticate the user
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            # Log the user in
+            login(request, user)
+            return render(request, 'show.html')
+        else:
+            # Display an error message for invalid credentials
+            messages.error(request, "Invalid Login Credentials. Please Try Again.")
+            return render(request, 'login.html')  # Show the login page again
+
+    # Render login page if the request method is GET
+    return render(request, 'login.html')
+def logincont(request):
+    if request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+
+        # Authenticate the user
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            # Log the user in
+            login(request, user)
+            return render(request, 'showcontacts.html')
+        else:
+            # Display an error message for invalid credentials
+            messages.error(request, "Invalid Login Credentials. Please Try Again.")
+            return render(request, 'login.html')  # Show the login page again
+
+    # Render login page if the request method is GET
     return render(request, 'login.html')
 def subscribe(request):
     return render(request, 'starter-page.html')
@@ -172,10 +191,6 @@ def order_view(request):
         return redirect('summary')
 
     return render(request, 'order.html', {'food_items': food_items})
-
-
-
-
 
 def summary_view(request):
     session_orders = request.session.get('orders', {})
@@ -304,11 +319,14 @@ def delete_all_orders_view(request):
         messages.error(request, "No session orders to delete.")
 
     # Delete all orders from the database
-    deleted_count, _ = Order.objects.all().delete()  # Adjust this query to target only relevant orders
-    if deleted_count > 0:
-        messages.success(request, f"{deleted_count} orders have been deleted from the database.")
-    else:
-        messages.error(request, "No orders found in the database to delete.")
+    try:
+        deleted_count, _ = Order.objects.all().delete()  # Delete all orders in the database
+        if deleted_count > 0:
+            messages.success(request, f"{deleted_count} orders have been deleted from the database and admin panel.")
+        else:
+            messages.error(request, "No orders found in the database or admin panel to delete.")
+    except Exception as e:
+        messages.error(request, f"An error occurred while deleting orders: {str(e)}")
 
     return redirect('summary')
 

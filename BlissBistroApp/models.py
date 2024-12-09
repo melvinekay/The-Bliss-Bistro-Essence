@@ -1,4 +1,5 @@
 from django.db import models
+from decimal import Decimal
 
 # Create your models here.
 class Member(models.Model):
@@ -67,6 +68,11 @@ class Order(models.Model):
     item = models.ForeignKey(FoodItem, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField()
     total_price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    # def save(self, *args, **kwargs):
+    #     if self.item and self.quantity:
+    #         self.total_price = Decimal(self.item.price) * self.quantity
+    #     super().save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.quantity} x {self.item.name} (Session: {self.session_key})"

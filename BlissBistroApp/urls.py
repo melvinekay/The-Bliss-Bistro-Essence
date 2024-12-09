@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from BlissBistroApp import views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -44,6 +45,8 @@ urlpatterns = [
     path('update/<int:id>', views.update, name='update'),
     path('register/', views.register, name='register'),
     path('login/', views.login, name='login'),
+    path('logincont/', views.logincont, name='logincont'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('subscribe/', views.starter, name='starter'),
     path('summary/', views.summary_view, name='summary'),
     path('order/', views.order_view, name='order'),
